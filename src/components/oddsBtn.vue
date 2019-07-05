@@ -87,7 +87,7 @@ export default {
     }
   },
   methods: {
-    oddsBtnEvent: function(e, odds, mid, live, type, pool, home, away, poolName, line) {
+    oddsBtnEvent(e, odds, mid, live, type, pool, home, away, poolName, line) {
       const $Store = this.$store.state
       if (e.currentTarget.classList.contains(this.oddsDisabled)) {
         return

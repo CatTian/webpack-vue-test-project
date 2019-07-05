@@ -64,7 +64,7 @@ export default {
     // this.pollingTimer = setInterval(this.getSingleData, 5000);
   },
   methods: {
-    getSingleData: function() {
+    getSingleData() {
       this.$axios
         .get('fbSingle.json', {
           s: "MatchOdds"
@@ -78,7 +78,7 @@ export default {
           console.log(error);
         });
     },
-    upDataSingleData: function() {
+    upDataSingleData() {
       this.$axios
         .get('fbSingle_up.json', {
           s: "MatchOdds"

@@ -53,7 +53,7 @@ export default {
     // this.pollingTimer = setInterval(this.getListData, 5000);
   },
   methods: {
-    getUser: function() {
+    getUser() {
       this.$axios
         .get('user.json')
         .then(res => {
@@ -69,7 +69,7 @@ export default {
           console.log(error);
         });
     },
-    getListData: function() {
+    getListData() {
       this.$axios
         .get('fbList.json', {
           s: "Matchlist"
@@ -88,7 +88,7 @@ export default {
           console.log(error);
         });
     },
-    updataListData: function() {
+    updataListData() {
       this.$axios
         .get('/fbList_up.json', {
           s: "Matchlist"

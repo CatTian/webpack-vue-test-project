@@ -7,10 +7,10 @@
             v-for="(name, index) in langBtn"
             :key="index"
             @click="transLang($event, index)"
-            :class="{btnActive:locale == index}"
+            :class="{ btnActive: locale == index }"
             >{{ name }}</span
           >
-                      <!-- v-show="locale !== index" -->
+          <!-- v-show="locale !== index" -->
         </div>
         <div :class="$style.appInfo">
           <div :class="$style.logo">
@@ -54,7 +54,7 @@ export default {
     }
   },
   methods: {
-    transLang: function(e, key) {
+    transLang(e, key) {
       this.$i18n.locale = key;
       // 设置cookies保存用户选择的语言环境
       docCookies.setItem("lang", key);
@@ -63,7 +63,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.btnActive{
+.btnActive {
   background-color: rgba(255, 255, 255, 0.2);
 }
 </style>

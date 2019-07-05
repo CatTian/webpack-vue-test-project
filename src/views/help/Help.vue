@@ -27,7 +27,7 @@ export default {
     // this.pollingTimer = setInterval(this.getListData, 5000)
   },
   methods: {
-    getListData: function() {
+    getListData() {
       let vm = this;
       this.$axios
         .get("abc.json", {
@@ -55,25 +55,25 @@ export default {
     margin-top: 100px;
     font-size: 32px;
     padding: 0 40px;
-    h1{
+    h1 {
       font-size: 40px;
       text-align: center;
       padding-bottom: 30px;
     }
-    article{
+    article {
       padding-bottom: 40px;
     }
-    .title{
+    .title {
       padding: 20px 0;
       font-size: 32px;
       line-height: 40px;
       display: flex;
       font-weight: bold;
-      > img{
+      > img {
         margin-right: 20px;
       }
     }
-    .msg{
+    .msg {
       line-height: 48px;
       font-size: 28px;
     }

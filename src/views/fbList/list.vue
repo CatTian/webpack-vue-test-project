@@ -61,7 +61,7 @@ export default {
 
   },
   methods: {
-    slideEvent: function(e) {
+    slideEvent(e) {
       return e
       // const obj = e.currentTarget
       // console.log(obj);

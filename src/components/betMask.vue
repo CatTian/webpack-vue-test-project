@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     // 金额选择区
-    moneyBtnEvent: function(e, money) {
+    moneyBtnEvent(e, money) {
       const obj = e.currentTarget;
       const activeName = this.moneyActive;
       const isActive = obj.classList.contains(activeName);
@@ -107,7 +107,7 @@ export default {
       this.$store.state.betParams.Score = money;
     },
     // 模拟 input placeholder 效果
-    imitatePlaceholder: function(e) {
+    imitatePlaceholder(e) {
       const label = e.currentTarget.parentNode.querySelector("label");
       const isHide = label.classList.contains(this.labelHide);
       if (isHide) {
@@ -122,7 +122,7 @@ export default {
       label.classList.add(this.labelHide);
     },
     // blur input
-    blurInput: function(e) {
+    blurInputn(e) {
       const label = e.currentTarget.parentNode.querySelector("label");
       if (!e.currentTarget.value) {
         label.classList.remove(this.labelHide);
@@ -130,7 +130,7 @@ export default {
       }
     },
     // 金额输入区
-    moneyCustomEvent: function(e) {
+    moneyCustomEvent(e) {
       const obj = e.currentTarget;
       const activeName = this.moneyActive;
       const isActive = obj.classList.contains(activeName);
@@ -161,13 +161,13 @@ export default {
       this.$store.state.betParams.Score = obj.value;
     },
     // 移除按钮多余的 active
-    removeOtherActive: function() {
+    removeOtherActive() {
       const haveActiveBtn = document.querySelector("." + this.moneyActive);
       if (haveActiveBtn) {
         haveActiveBtn.classList.remove(this.moneyActive);
       }
     },
-    closeBet: function() {
+    closeBet() {
       // 改变投注框显示状态
       this.$store.commit("changeBetFlag", false);
       // 初始化 store 订单参数
@@ -179,7 +179,7 @@ export default {
           .classList.remove("active");
       }
     },
-    submitEvent: function() {
+    submitEvent() {
       const vm = this;
       const $Store = this.$store;
       const score = $Store.state.betParams.Score;

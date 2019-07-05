@@ -71,7 +71,7 @@ export default {
     }
   },
   methods: {
-    selectLeague: function(e, lid) {
+    selectLeague(e, lid) {
       if (this.$store.state.betFlag) {
         // 改变投注框显示状态
         this.$store.commit("changeBetFlag", false);

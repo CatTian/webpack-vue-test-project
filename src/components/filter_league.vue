@@ -58,13 +58,13 @@ export default {
   },
   // 默认为全部显示，所以需要在渲染前收集到所有赛事id
   mounted() {
-    const $FilterArr = this.$store.state.filterArr;
-    if (
-      $FilterArr.length !==
-      document.querySelectorAll(".filter-btnDisplay-btn").length
-    ) {
+    let $FilterArr = this.$store.state.filterArr;
+    const btnLenth = document.querySelectorAll(".filter-btnDisplay-btn").length;
+
+    if ($FilterArr.length !== btnLenth) {
+      // Object.keys(this.feague).concat($FilterArr) 该concat方法会返回新数组，覆盖掉vue放的监控器
       for (let item in this.feague) {
-        if (this.feague.hasOwnProperty(item)) {
+        if (this.feague.hasOwnProperty(item)) {          
           $FilterArr.push(item);
         }
       }

@@ -62,7 +62,7 @@ export default {
   watch: {
     odds(newV, oldV) {
       // 考虑到single页面是单场赛事mid统一，所以添加pool来区分玩法按钮
-      const obj = document.querySelector('.oddsBtn-' + this.pool + this.mid).querySelectorAll('dl')
+      const obj = document.querySelector(`.oddsBtn-${this.pool}${this.mid}`).querySelectorAll('dl')
       for (let i = 0; i < oldV.length; i++) {
         // 如有【选中】且【停止下注】则关闭投注栏并初始化 order 参数
         if (this.oddsStatus[i] !== 'Open' && obj[i].classList.contains('active')) {
@@ -109,7 +109,7 @@ export default {
         this.$store.commit('initParams')
         return
       }
-      const haveActiveBtn = document.querySelector('.' + activeName)
+      const haveActiveBtn = document.querySelector(`.${activeName}`)
 
       // 同步 store 订单参数
       $Store.betParams.s = 'LiveTicket'
@@ -122,7 +122,7 @@ export default {
       $Store.teamName.home = home
       $Store.teamName.away = away
       $Store.teamName.pool = poolName
-
+      
       if (haveActiveBtn) {
         haveActiveBtn.classList.remove(activeName)
       }

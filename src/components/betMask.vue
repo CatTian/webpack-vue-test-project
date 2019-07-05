@@ -162,7 +162,7 @@ export default {
     },
     // 移除按钮多余的 active
     removeOtherActive() {
-      const haveActiveBtn = document.querySelector("." + this.moneyActive);
+      const haveActiveBtn = document.querySelector(`.${this.moneyActive}`);
       if (haveActiveBtn) {
         haveActiveBtn.classList.remove(this.moneyActive);
       }

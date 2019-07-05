@@ -4,8 +4,8 @@
   (function () {
     // 根据devicePixelRatio自定计算scale
     // 可以有效解决移动端1px这个世纪难题。
-    let viewportEl = document.querySelector("meta[name=\"viewport\"]"),
-      hotcssEl = document.querySelector("meta[name=\"hotcss\"]"),
+    let viewportEl = document.querySelector(`meta[name="viewport"]`),
+      hotcssEl = document.querySelector(`meta[name="hotcss"]`),
       dpr = window.devicePixelRatio || 1,
       maxWidth = 540,
       designWidth = 0

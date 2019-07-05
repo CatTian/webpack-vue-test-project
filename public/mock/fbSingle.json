@@ -1,0 +1,75 @@
+{
+  "List": [{
+    "Mid": "17369575",
+    "Date": "03-15",
+    "Time": "01:55",
+    "LeagueId": "679",
+    "League": "\u4e2d\u8d85",
+    "HomeId": "3375",
+    "Home": "\u5e7f\u5dde\u5bcc\u529b",
+    "AwayId": "3370",
+    "Away": "\u6df1\u5733\u4f73\u5146\u4e1a",
+    "HFull": "0",
+    "AFull": "5",
+    "HHalf": "0",
+    "AHalf": "3",
+    "Status": "Finished",
+    "StatusTime": "\u5b8c\u8d5b 92`",
+    "live": 1,
+    "ASIAN": {
+      "S": "Open",
+      "Line": "0.75 (0-1)",
+      "H": "1.6",
+      "A": "2.06"
+    },
+    "OVERUNDER": {
+      "S": "Open",
+      "Line": "5.0",
+      "Over": "6.44",
+      "Under": "1.05"
+    },
+    "HAD": {
+      "S": "Open",
+      "A": "3.91",
+      "D": "3.8",
+      "H": "1.75"
+    },
+    "DOUBLE": {
+      "S": "Open",
+      "HD": "19.2",
+      "HA": "1",
+      "DA": "1"
+    },
+    "BOTH": {
+      "S": "Open",
+      "Yes": "10.33",
+      "No": "1"
+    },
+    "HGOAL": {
+      "One": "12.33",
+      "Two": "63.56",
+      "More": "95.82",
+      "No": "1",
+      "S0": "Open",
+      "S1": "Open",
+      "S2": "Open",
+      "S3": "Open"
+    },
+    "AGOAL": {
+      "One": "5.51",
+      "Two": "3.75",
+      "More": "2.25",
+      "No": "4.56",
+      "S0": "Open",
+      "S1": "Open",
+      "S2": "Open",
+      "S3": "Open"
+    },
+    "ODDEVEN": {
+      "S": "Open",
+      "Odd": "1.15",
+      "Even": "4.15"
+    }
+  }],
+  "Result": true
+}

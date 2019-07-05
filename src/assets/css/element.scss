@@ -1,0 +1,87 @@
+@charset "UTF-8"; // 三角形
+@mixin dot($height: 12px) {
+  content: '';
+  height: 0;
+  width: 0;
+  border-bottom: $height solid;
+  border-top: 0;
+  border-left: $height solid transparent;
+  border-right: $height solid transparent;
+}
+@mixin arrow {
+  display: inline-block;
+  height: 20px;
+  width: 11.4px;
+  background: {
+    size: 100%;
+    repeat: no-repeat;
+    position: center;
+  }
+}
+// 提交按钮
+@mixin submitBtn($height: 88px,$width:100%,$lineHeight:88px,$fontsize:32px,$color:#fff,$backgroundColor:#F25562,$borderRadius:4px) {
+  height: $height;
+  line-height: $lineHeight;
+  width: $width;
+  font-size: $fontsize;
+  color: $color;
+  background-color: $backgroundColor;
+  border-radius: $borderRadius;
+}
+// 卡片
+@mixin panel($backgroundColorPanel:#fff,$height:64px,$lineHeight:64px,$width: 100%,$backgroundColorH2:#F0F0F2,$fontsize:28px,$color:#424866,$textIndent:20px,$borderBottom:1px solid #fff) {
+  background: $backgroundColorPanel;
+  padding: 0;
+  margin: 0;
+
+  > h2 {
+    height: $height;
+    width: $width;
+    line-height: $lineHeight;
+    text-align: left;
+    position: relative;
+    background-color: $backgroundColorH2;
+    font-size: $fontsize;
+    color: $color;
+    text-indent: $textIndent;
+    border-bottom: $borderBottom;
+  }
+}
+// 列表
+@mixin list($direction:column) {
+  @include flex($direction)
+}
+// 玩法按钮
+@mixin oddsBtn($width: 100%,$dtFontSize:20px,$ddFontSize:28px,$dtColor:#424866,$ddColor:#424866, $dtLineHeight:20px,$ddLineHeight: 44px,$dtMargin:10px) {
+  width: $width;
+  @include flex($justify: center);
+  border-left: 2px solid #F0F0F2;;
+  align-items: center;
+  flex-wrap: wrap;
+  &:first-child{
+    border: 0;
+  }
+  dt {
+    width: 100%;
+    font-size: $dtFontSize;
+    color: $dtColor;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: $dtLineHeight;
+    margin-bottom: $dtMargin;
+  }
+
+  dd {
+    position: relative;
+    // width: 100%;
+    font-size: $ddFontSize;
+    color: $ddColor;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: $ddLineHeight;
+
+    &::after {
+      @include arrow;
+    }
+  }
+}

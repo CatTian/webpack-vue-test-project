@@ -14,31 +14,31 @@ export default new Vuex.Store({
     // 订单参数 【post】
     betParams: {
       s: '',
-      Mid: '',
-      Live: '',
-      Pool: '',
-      Line: '',
-      Key: '',
-      Value: '',
-      Score: '',
-      Currency: 'usd'
+      Mid: '', // 球队id
+      Live: '', // 滚球1，否则0
+      Pool: '', // 玩法名称
+      Line: '', // 让分线
+      Key: '',// 玩法选项
+      Value: '',// 玩法赔率
+      Score: '',// 投注金额
+      Currency: 'usd' // 币种：默认
     },
-    teamName: {
-      home: '',
-      away: '',
-      pool: ''
+    teamName: { // 用来显示在投注框中的球队信息
+      home: '',// 主队名
+      away: '',// 客队名
+      pool: ''// 玩法名称
     },
-    betFlag: false,
-    user: {
+    betFlag: false, // 投注框显示状态
+    user: { // 用户信息
       id: 'xxx',
       token: 'xxx',
-      balance: '-'
+      balance: '-' // 用户余额
     },
     tips: {
-      states: false,
-      value: ''
+      states: false,// toast 的显示标示 true显示
+      value: ''// toast 的文案
     },
-    filterArr: []
+    filterArr: []// 筛选后需要显示的联赛id
   },
   mutations: { // 同步
     setNewLang(state, newKey) {
@@ -64,13 +64,14 @@ export default new Vuex.Store({
         pool: ''
       }
     },
-    // change betFlag
+    // 改变投注框状态
     changeBetFlag(state, flag) {
       state.betFlag = flag
       if (!flag) {
         document.body.style.paddingBottom = 0
       }
     },
+    // 设置
     setTips(state, tip) {
       state.tips.states = true
       state.tips.value = tip

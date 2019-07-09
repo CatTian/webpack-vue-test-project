@@ -14,12 +14,12 @@
           <div :class="$style.itemsName">
             <router-link :to="{name:'fbSingle',params: {lang: locale }}">
               <div :class="$style.itemsInfo">
-                <span><img :src="imgUrl + '/football/team/'+ item.HomeId +'.png'" /></span>
+                <span><img :src="`${imgUrl}/football/team/${item.HomeId}.png`" /></span>
                 <b>{{ item.Home }}</b>
                 <i :class="item.HFull?$style.matchStart:''">{{ !item.HFull?'-':item.HFull }}</i>
               </div>
               <div :class="$style.itemsInfo">
-                <span><img :src="imgUrl + '/football/team/'+ item.AwayId +'.png'" /></span>
+                <span><img :src="`${imgUrl}/football/team/${item.AwayId}.png`" /></span>
                 <b>{{ item.Away }}</b>
                 <i :class="item.AFull?$style.matchStart:''">{{ !item.AFull?'-':item.AFull }}</i>
               </div>

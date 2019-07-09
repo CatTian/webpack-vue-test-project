@@ -62,12 +62,8 @@ export default {
     const btnLenth = document.querySelectorAll(".filter-btnDisplay-btn").length;
 
     if ($FilterArr.length !== btnLenth) {
-      // Object.keys(this.feague).concat($FilterArr) 该concat方法会返回新数组，覆盖掉vue放的监控器
-      for (let item in this.feague) {
-        if (this.feague.hasOwnProperty(item)) {          
-          $FilterArr.push(item);
-        }
-      }
+      // Object.keys(this.feague).concat($FilterArr) 该concat方法会返回新数组，覆盖掉vue放的监控器[__ob__: Observer]
+      $FilterArr.push(...Object.keys(this.feague));      
     }
   },
   methods: {

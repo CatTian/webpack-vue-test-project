@@ -1,5 +1,5 @@
 <template>
-  <div class="oddsBtnBox" :class="['oddsBtn-' + pool + mid, cname]">
+  <div class="oddsBtnBox" :class="[`oddsBtn-${pool}${mid}`, cname]">
     <dl
       v-for="(odd, i) in odds"
       :key="i"
@@ -134,7 +134,7 @@ export default {
           const pageY = e.pageY
           const betMaskHeight = document.querySelector('.betMask').scrollHeight
           // 留给投注栏足够的底部空间
-          document.body.style.paddingBottom = betMaskHeight + 'px'
+          document.body.style.paddingBottom = `${betMaskHeight}px`
           if (pageY > document.body.scrollHeight-(betMaskHeight+100)) {
             scrollSmoothTo(document.body.scrollHeight+betMaskHeight)
           }

@@ -6,8 +6,8 @@ let base = {
   // api_live: 'http://39.96.78.190/test111/eos/api.php',
   api_live : './mock',
   // 球队logo地址
-  // 足球：+'/football/team/'+ Mid +'.png'
-  // 篮球：+'/basketball/team/'+'Mid'+'.png'
+  // 足球：+`/football/team/${Mid}.png`
+  // 篮球：+`/basketball/team/${Mid}.png`
   img: 'http://www.misports.cn/images'
 }
 // 环境的切换 启用本地 mock 数据

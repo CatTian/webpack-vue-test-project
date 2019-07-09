@@ -7,7 +7,7 @@
           :key="i"
           :class="$style.item"
         >
-          <dt v-if="!(i > 3)" :class="$style['icon' + (i + 1)]"></dt>
+          <dt v-if="!(i > 3)" :class="$style[`icon${i + 1}`]"></dt>
           <dd>
             <h3>{{ $t(`Index.secondScreen[${i}].title`) }}</h3>
             <p>{{ $t(`Index.secondScreen[${i}].msg`) }}</p>

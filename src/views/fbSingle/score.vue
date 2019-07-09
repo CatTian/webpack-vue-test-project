@@ -3,14 +3,14 @@
     <template v-slot:content>
       <div :class="$style.teamName">{{ home }}</div>
       <span :class="$style.logo"
-        ><img :src="imgUrl + '/football/team/' + hMid + '.png'"
+        ><img :src="`${imgUrl}/football/team/${hMid}.png`"
       /></span>
       <div :class="$style.score">
-        <p>{{ status != "NSY" ? hFull + ":" + aFull : time }}</p>
+        <p>{{ status != "NSY" ? `${hFull} : ${aFull}` : time }}</p>
         <i> {{ status != "NSY" ? statusTime : date }}</i>
       </div>
       <span :class="$style.logo"
-        ><img :src="imgUrl + '/football/team/' + aMid + '.png'"
+        ><img :src="`${imgUrl}/football/team/${aMid}.png`"
       /></span>
       <div :class="$style.teamName">{{ away }}</div>
     </template>

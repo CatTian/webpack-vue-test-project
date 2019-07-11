@@ -15,16 +15,16 @@ let betParams = {
   Live: '', // 滚球1，否则0
   Pool: '', // 玩法名称
   Line: '', // 让分线
-  Key: '',// 玩法选项
-  Value: '',// 玩法赔率
-  Score: '',// 投注金额
+  Key: '', // 玩法选项
+  Value: '', // 玩法赔率
+  Score: '', // 投注金额
   Currency: 'usd' // 币种：默认
 };
 // 投注框中的球队信息
 let teamName = {
-  home: '',// 主队名
-  away: '',// 客队名
-  pool: ''// 玩法名称
+  home: '', // 主队名
+  away: '', // 客队名
+  pool: '' // 玩法名称
 };
 export default new Vuex.Store({
   state: {
@@ -40,10 +40,10 @@ export default new Vuex.Store({
       balance: '-' // 用户余额
     },
     tips: {
-      states: false,// toast 的显示标示 true显示
-      value: ''// toast 的文案
+      states: false, // toast 的显示标示 true显示
+      value: '' // toast 的文案
     },
-    filterArr: []// 筛选后需要显示的联赛id
+    filterArr: [] // 筛选后需要显示的联赛id
   },
   mutations: { // 同步
     setNewLang(state, newKey) {
@@ -74,9 +74,7 @@ export default new Vuex.Store({
       state.user.balance = balance
     },
     initUser(state, user) {
-      state.user.id = user.id
-      state.user.balance = user.balance
-      state.user.token = user.token
+      state.user = user
     },
     initFilterArr(state) {
       state.filterArr = []

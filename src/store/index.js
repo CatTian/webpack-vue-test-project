@@ -8,26 +8,31 @@ import navLang from '@/i18n/getNavigatorLang'
 // 不好好读文档会后悔系列...
 Vue.use(Vuex)
 
+// 订单参数 【post】
+let betParams = {
+  s: '',
+  Mid: '', // 球队id
+  Live: '', // 滚球1，否则0
+  Pool: '', // 玩法名称
+  Line: '', // 让分线
+  Key: '',// 玩法选项
+  Value: '',// 玩法赔率
+  Score: '',// 投注金额
+  Currency: 'usd' // 币种：默认
+};
+// 投注框中的球队信息
+let teamName = {
+  home: '',// 主队名
+  away: '',// 客队名
+  pool: ''// 玩法名称
+};
 export default new Vuex.Store({
   state: {
     navLang,
     // 订单参数 【post】
-    betParams: {
-      s: '',
-      Mid: '', // 球队id
-      Live: '', // 滚球1，否则0
-      Pool: '', // 玩法名称
-      Line: '', // 让分线
-      Key: '',// 玩法选项
-      Value: '',// 玩法赔率
-      Score: '',// 投注金额
-      Currency: 'usd' // 币种：默认
-    },
-    teamName: { // 用来显示在投注框中的球队信息
-      home: '',// 主队名
-      away: '',// 客队名
-      pool: ''// 玩法名称
-    },
+    betParams: betParams,
+    // 用来显示在投注框中的球队信息
+    teamName: teamName,
     betFlag: false, // 投注框显示状态
     user: { // 用户信息
       id: 'xxx',
@@ -46,23 +51,9 @@ export default new Vuex.Store({
     },
     initParams(state) {
       // 初始化订单参数
-      state.betParams = {
-        s: '',
-        Mid: '',
-        Live: '',
-        Pool: '',
-        Line: '',
-        Key: '',
-        Value: '',
-        Score: '',
-        Currency: 'usd'
-      }
+      state.betParams = betParams
       // 初始化赛事名
-      state.teamName = {
-        home: '',
-        away: '',
-        pool: ''
-      }
+      state.teamName = teamName
     },
     // 改变投注框状态
     changeBetFlag(state, flag) {

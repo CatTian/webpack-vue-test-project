@@ -1,29 +1,10 @@
 # hello-cli3
 
-## Project setup
+## 一个简单的说明
 ```
-npm install
+master: 里面是首次上传的项目
+
+其他分支: 根据分支名称做了相应的优化
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+这个项目是一个持续的vue练习项目，会基于这个简单的项目在不同分支上做一些实验性的或者说技能的练习。
